@@ -10,8 +10,16 @@ class HoverPage extends Page {
     return $(".figcaption");
   }
 
+  get example() {
+    return $(".example");
+  }
+
   async hover() {
     (await this.figure).moveTo();
+  }
+
+  async unhover() {
+    (await this.example).moveTo();
   }
 
   open() {
