@@ -13,4 +13,13 @@ describe("hover page", () => {
     await HoverPage.unhover();
     await expect(HoverPage.figcaption).not.toBeDisplayed();
   });
+
+  it("on hover other captions are not shown", async () => {
+    await HoverPage.open();
+    let figcaptions = await HoverPage.figcaptions;
+    await HoverPage.hoverOne(0);
+    for (let i = 1; i < figcaptions.length; i++) {
+      await expect(HoverPage.figcaptions[i].not.toBeDisplayed());
+    }
+  });
 });

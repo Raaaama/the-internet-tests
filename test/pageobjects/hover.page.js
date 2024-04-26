@@ -6,8 +6,16 @@ class HoverPage extends Page {
     return $(".figure");
   }
 
+  get figures() {
+    return $$(".figure");
+  }
+
   get figcaption() {
     return $(".figcaption");
+  }
+
+  get figcaptions() {
+    return $$(".figcaption");
   }
 
   get example() {
@@ -20,6 +28,10 @@ class HoverPage extends Page {
 
   async unhover() {
     (await this.example).moveTo();
+  }
+
+  async hoverOne(num) {
+    await this.figures[num].moveTo();
   }
 
   open() {
