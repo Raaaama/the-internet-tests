@@ -1,5 +1,5 @@
 {
-  "name": "Test",
+  "name": "the-internet-tests",
   "type": "module",
   "devDependencies": {
     "@wdio/cli": "^8.36.1",

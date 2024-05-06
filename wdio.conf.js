@@ -52,6 +52,19 @@ export const config = {
       // capabilities for local browser web tests
       browserName: "chrome", // or "firefox", "microsoftedge", "safari"
       webSocketUrl: true,
+
+      //
+      maxInstances: 1,
+      browserName: "chrome",
+      "goog:chromeOptions": {
+        args: [
+          "--no-sandbox",
+          "--disable-infobars",
+          "--headless",
+          "--disable-gpu",
+          "--window-size=1440,735",
+        ],
+      },
     },
   ],
 
