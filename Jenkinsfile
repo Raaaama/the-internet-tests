@@ -1,9 +1,6 @@
 pipeline {
-    agent {
-      docker {
-        image 'node:alpine'
-      }
-    }
+    agent any
+    tools {nodejs "nodejs-node"}
     stages {
       stage('checkout') {
         steps {
@@ -12,8 +9,8 @@ pipeline {
       }
       stage('test') {
         steps {
-          sh 'npm install -g @wdio/cli'
-          sh 'wdio'
+          sh 'npm install'
+          sh 'npx wdio'
         }
       }
     }
