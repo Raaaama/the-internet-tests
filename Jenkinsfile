@@ -2,15 +2,14 @@ pipeline {
     agent any
     stages {
       stage('checkout') {
-        steps{
+        steps {
           checkout scm
         }
       }
-      
       stage('test') {
         steps {
-          sh 'sudo apt install npm'
-          sh 'npx wdio'
+          sh 'npm install -g @wdio/cli'
+          sh 'wdio'
         }
       }
     }
