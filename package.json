@@ -9,8 +9,5 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.js"
-  },
-  "dependencies": {
-    "wdio-robonut-service": "^0.7.3"
   }
 }
